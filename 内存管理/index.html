@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>内存管理项目</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <h1 class="text-center">内存管理项目</h1>
+    <h5 class="text-center"><i>作者：王蔚达 2151300</i></h5>
+    <br>
+    <!--Table of the basic parametres-->
+    <div class="table-container">
+
+    </div>
+    <!--Table of Process-->
+    <div class="table-container">
+        <table id="para">
+            <caption><b>参数信息</b></caption>
+            <tr>
+                <td>参数</td>
+                <td>值</td>
+            </tr>
+            <tr>
+                <td>内存块数</td>
+                <td id="overall_memory_blocks">4</td>
+            </tr>
+            <tr>
+                <td>总指令数</td>
+                <td id="overall_instructions">320</td>
+            </tr>
+            <tr>
+                <td>每页存放指令数</td>
+                <td id="instruction_per_page">10</td>
+            </tr>
+        </table>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <table id="fifo-table">
+            <caption><b>FIFO算法</b></caption>
+            <tr>
+                <td>
+                    <button id="fifo-button" class="button">Start</button>
+                </td>
+            </tr>
+            <tr>
+                <td>缺页次数</td>
+            </tr>
+            <tr>
+                <td id="fifo_miss_page_times">NULL</td>
+            </tr>
+            <tr>
+                <td>缺页率</td>
+            </tr>
+            <tr>
+                <td id="fifo_miss_page_rate">NULL</td>
+            </tr>
+        </table>
+        &nbsp;&nbsp;
+        <table id="lru-table">
+            <caption><b>LRU算法</b></caption>
+            <tr>
+                <td>
+                    <button id="lru-button" class="button">Start</button>
+                </td>
+            </tr>
+            <tr>
+                <td>缺页次数</td>
+            </tr>
+            <tr>
+                <td id="lru_miss_page_times">NULL</td>
+            </tr>
+            <tr>
+                <td>缺页率</td>
+            </tr>
+            <tr>
+                <td id="lru_miss_page_rate">NULL</td>
+            </tr>
+        </table>
+    </div>
+    <div class="center">
+
+        <table id="memory_table" height="100px">
+            <thead>
+                <tr>
+                    <th scope="col">编号</th>
+                    <th scope="col">指令代号</th>
+                    <th scope="col">内存块1</th>
+                    <th scope="col">内存块2</th>
+                    <th scope="col">内存块3</th>
+                    <th scope="col">内存块4</th>
+                    <th scope="col">缺页</th>
+                    <th scope="col">放入</th>
+                    <th scope="col">换出</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
